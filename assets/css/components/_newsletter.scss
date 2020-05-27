@@ -1,0 +1,35 @@
+/*----------------------------------------*/
+/*  20 - Components - Newsletter
+/*----------------------------------------*/
+.newsletter-area{
+    box-shadow: 0 21px 21px 0 rgba(0,0,0,.1);
+    background-color: $primary-color;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    padding: 30px 30px 88px;
+    border-radius: 8px;
+    text-align: center;
+    h2,
+    h3,
+    p{
+        color: $white-color;
+    }
+    h2{
+        &.heading{
+            @include typography(34px, 58.9px);
+        }
+    }
+    h3{
+        &.sub-heading{
+            @include typography(18px, 31.2px);
+            text-transform: uppercase;
+            padding-bottom: 15px;
+            letter-spacing: 3px;
+        }
+    }
+    p{
+        &.short-desc{
+            padding-bottom: 45px;
+        }
+    }
+}

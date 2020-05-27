@@ -1,0 +1,98 @@
+/*----------------------------------------*/
+/*  32 - Pages - About Us
+/*----------------------------------------*/
+
+/* ---Our Teacher Area--- */
+.our-teacher_area{
+    padding-top: 70px;
+    padding-bottom: 100px;
+    .section-title{
+        padding-bottom: 60px;
+    }
+    [class*="col-"]{
+        &:not(:nth-child(n+5)){
+            .single{
+                &-item{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        &:not(:nth-child(n+7)){
+            .single{
+                &-item{
+                    @include breakpoint(max-md_device){
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+        &:not(:last-child){
+            .single{
+                &-item{
+                    @include breakpoint(max-xs_device){
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .btn-wrap{
+        padding-top: 65px;
+    }
+}
+
+.single{
+    &-inner_item{
+        padding: 30px 25px 0;
+        border-radius: 5px;
+        text-align: center;
+        @extend %basetransition;
+        &:hover{
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.06);
+            background-color: $white-color;
+            span{
+                &.teacher-position{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+            .social-link{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &-img{
+        &.with-radius{
+            margin: 0 auto;
+            img{
+                border-radius: 100%;
+                width: 100%;
+            }
+        }
+    }
+    &-content{
+        h3{
+            &.teacher-name{
+                @include typography(18px, 31.2px, 400);
+                padding-top: 15px;
+                @include breakpoint(max-lg_device){
+                    font-size: 16px;
+                }
+            }
+        }
+        span{
+            &.teacher-position{
+                @include typography(14px);
+                font-style: italic;
+                color: $nobel-color;
+            }
+        }
+        .social-link{
+            position: relative;
+            bottom: 25px;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

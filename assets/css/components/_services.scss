@@ -1,0 +1,53 @@
+/*----------------------------------------*/
+/*  27 - Components - Services
+/*----------------------------------------*/
+.services-area{
+    padding-top: 100px;
+    padding-bottom: 90px;
+    [class*="col-"]{
+        &:not(:nth-child(n+4)){
+            .services-item{
+                padding-bottom: 95px;
+            }
+        }
+        &:not(:last-child){
+            .services-item{
+                @include breakpoint(max-xs_device){
+                    padding-bottom: 95px;
+                }
+            }
+        }
+    }
+}
+.services-item{
+    display: flex;
+    .services-icon{
+        i{
+            background-color: $white-smoke_color;
+            color: $primary-color;
+            font-size: 25px;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 100%;
+            text-align: center;
+            display: block;
+        }
+    }
+    .services-content{
+        padding-left: 25px;
+        h3{
+            &.title{
+                @include typography(14px, 21px, 500);
+                text-transform: uppercase;
+                padding-bottom: 10px;
+            }
+        }
+        p{
+            &.short-desc{
+                @include typography(15px, 26px);
+                color: $nobel-color;
+            }
+        }
+    }
+}

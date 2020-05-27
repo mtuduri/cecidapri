@@ -1,0 +1,47 @@
+/*----------------------------------------*/
+/*  40 - Pages - Contact
+/*----------------------------------------*/
+.contact-area{
+    padding-top: 95px;
+    padding-bottom: 100px;
+}
+
+/* ---Contact Info--- */
+.contact-info{
+    ul{
+        li{
+            &:not(:last-child){
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 20px;
+                margin-bottom: 25px;
+            }
+            h4{
+                &.heading{
+                    @include typography(16px, 27.7px, 500);
+                    letter-spacing: 2.2px;
+                    padding-bottom: 20px;
+                    i{
+                        padding-right: 25px;
+                        font-size: 30px;
+                        color: $atlantis-color;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            span{
+                &.short-desc{
+                    @include typography(15px, 26px);
+                    color: $nobel-color;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* ---Contact Form Area--- */
+.contact-form_area{
+    @include breakpoint(max-md_device){
+        padding-top: 35px;
+    }
+}

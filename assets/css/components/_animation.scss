@@ -1,0 +1,59 @@
+/*----------------------------------------*/
+/*  18 - Components - Animation
+/*----------------------------------------*/
+/* Slider Animation */
+.slick-active {
+	&.animation-style-01 {
+		.slide-content{
+			span{
+				animation-name: fadeInUp;
+				animation-delay: 1s;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+			h1{
+				animation-name: fadeInUp;
+				animation-delay: 1.5s;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+			.button-wrap{
+				animation-name: fadeInUp;
+				animation-delay: 2s;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+		}
+	}
+	&.animation-style-02 {
+		.slide-content{
+			animation-name: fadeInLeft;
+			animation-delay: 1s;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+	}
+}
+
+
+/*Ademy's Slide Up Animation*/
+@-webkit-keyframes adeSlideInUp {
+	0% {
+		transform: translateY(250px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes adeSlideInUp {
+	0% {
+		transform: translateY(250px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

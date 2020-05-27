@@ -1,0 +1,155 @@
+/*----------------------------------------*/
+/*  12 - Components - Button
+/*----------------------------------------*/
+/* ---Ademy's Button Position--- */
+.button-wrap{
+	display: flex;
+	&.position-center{
+		justify-content: center;
+	}
+}
+
+/* ---Ademy's Button--- */
+.ademy-btn {
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
+	background-color: $text-color;
+	border: 1px solid transparent;
+    color: $white-color;
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+    @extend %basetransition;
+	font-size: 14px;
+	letter-spacing: 1px;
+	@include breakpoint(max-xs_device){
+		width: 130px;
+		height: 35px;
+		line-height: 35px;
+		font-size: 11px;
+	}
+	&:hover{
+		background-color: $primary-color;
+		color: $white-color;
+	}
+}
+
+/* ---Button Transparent--- */
+.btn-transparent{
+	background-color: transparent;
+}
+/* ---Button Border Color--- */
+.white-border{
+	border: 2px solid $white-color;
+	&:hover{
+		background-color: $primary-color;
+		border-color: $primary-color;
+		color: $white-color;
+	}
+	&.active{
+		background-color: $primary-color;
+		border-color: $primary-color;
+		margin-right: 20px;
+		&:hover{
+			background-color: $white-color;
+			border-color: $white-color;
+			color: $primary-color;
+		}
+	}
+}
+
+.whisper-border{
+	border: 1px solid $border-color;
+	text-transform: capitalize;
+	color: $primary-color;
+	font-weight: 400;
+	&:hover{
+		border-color: $primary-color;
+		color: $white-color;
+	}
+}
+
+/* ---With Border Radius--- */
+.with-border_radius{
+	border-radius: 5px;
+}
+
+/* ---Button Size--- */
+.fullwidth-btn{
+	width: 100%;
+}
+.btn-md_size{
+	width: 120px;
+}
+.btn-lg_size{
+	width: 210px;
+}
+.btn-xl_size{
+	width: auto;
+	padding: 0 30px;
+}
+
+/* ---Button Color Variation--- */
+.atlantis-color_btn{
+	background-color: $atlantis-color;
+	color: $white-color;
+	&:hover{
+		background-color: $primary-color;
+		color: $white-color;
+	}
+}
+.denim-color_btn{
+	background-color: $primary-color;
+	color: $white-color;
+	&:hover{
+		background-color: $text-color;
+		color: $white-color;
+	}
+}
+.white-color_btn{
+	background-color: $white-color;
+	color: inherit;
+}
+
+/* ---Button Hover Color Variation--- */
+.hover-white_btn{
+	&:hover{
+		background-color: $white-color;
+		color: inherit;
+	}
+}
+.hover-white_border{
+	background-color: $white-color;
+	color: inherit;
+	&:hover{
+		background-color: transparent;
+		border-color: $white-color;
+	}
+}
+.hover-denim_border{
+	&:hover{
+		background-color: $white-color;
+		border-color: $primary-color;
+		color: $primary-color;
+	}
+}
+
+/* ---Additional Button Style--- */
+.share-post_btn{
+	border: 1px solid $border-color;
+	color: $primary-color;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 100%;
+	display: block;
+	text-align: center;
+	&:hover{
+		background-color: $primary-color;
+		border-color: $primary-color;
+		color: $white-color;
+	}
+}

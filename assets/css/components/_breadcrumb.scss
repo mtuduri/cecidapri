@@ -1,0 +1,57 @@
+/*----------------------------------------*/
+/*  19 - Components - Breadcrumb
+/*----------------------------------------*/
+.breadcrumb-area {
+	background-color: $white-smoke_color;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 350px;
+	position: relative;
+	.breadcrumb-content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		> h1 {
+			text-align: center;
+			@include typography(48px, 52px, 400);
+			padding-bottom: 15px;
+			@include breakpoint(max-xs_device){
+				font-size: 26px;
+				line-height: 30px;
+			}
+		}
+		ul {
+			> li {
+				color: $dark-gray_color;
+				display: inline-block;
+				padding-left: 20px;
+				position: relative;
+				&:first-child {
+					padding-left: 0;
+				}
+				&:before {
+					content: "/";
+					position: absolute;
+					font-size: 10px;
+					font-weight: 600;
+					right: -15px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&:last-child {
+					&:before {
+						display: none;
+					}
+				}
+				> a{
+					color: $dark-gray_color;
+					&:hover{
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}

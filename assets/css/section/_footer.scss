@@ -1,0 +1,117 @@
+/*----------------------------------------*/
+/*  31 - Section - Footer
+/*----------------------------------------*/
+.footer-area{
+	.footer-top_area{
+		padding: 60px 0 50px;
+	}
+}
+.footer-widgets_area{
+	@include breakpoint(max-md_device){
+		padding-bottom: 20px;
+	}
+	.widgets-heading{
+		@include typography(14px, 28px, 500);
+		letter-spacing: 3.1px;
+	}
+	.logo{
+		padding-bottom: 25px;
+		img{
+			width: 158px;
+		}
+	}
+	p{
+		&.short-desc{
+			@include typography(14px, 28px);
+			color: $nobel-color;
+			max-width: 85%;
+		}
+	}
+	.footer-widgets{
+		> ul{
+			> li{
+				&:not(:last-child){
+					margin-bottom: 5px;
+				}
+				> a{
+					@include typography(14px, 28px);
+					color: $nobel-color;
+				}
+			}
+		}
+	}
+	&.latest-tweets_widget{
+		.tweets-widget{
+			background-color: $white-color;
+			padding: 20px 22px 25px;
+			border-radius: 5px;
+			position: relative;
+			&:before{
+				border-style: solid;
+				border-color: #ededed transparent transparent transparent;
+				left: 34px;
+				bottom: -17px;
+				border-width: 18px 18px 0 0;
+				position: absolute;
+				content: "";
+			}
+			&:after{
+				left: 35px;
+				bottom: -15px;
+				border-width: 16px 16px 0 0;
+				border-style: solid;
+				border-color: #fff transparent transparent transparent;
+				position: absolute;
+				content: "";
+			}
+			> a{
+				@include typography(14px, 28px);
+				color: $nobel-color;
+				text-transform: none;
+				display: block;
+				color: #7e7e7e;
+				> span{
+					color: $atlantis-color;
+				}
+			}
+		}
+		h3{
+			&.title{
+				@include typography(14px, 18px, 500);
+				margin: 25px 0;
+				i{
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+/* ---Footer Bottom Area--- */
+.footer-bottom_area{
+	.footer-bottom_nav{
+		border-top: 1px solid $border-color;
+		padding: 20px 0;
+	}
+	.copyright{
+		@include breakpoint(max-xs_device){
+			text-align: center;
+		}
+		span,
+		a{
+			@include typography(14px, 28px);
+			color: $nobel-color;
+		}
+		a{
+			&:hover{
+				color: $primary-color;
+			}
+		}
+	}
+	.footer-right_area{
+		text-align: right;
+		@include breakpoint(max-xs_device){
+			text-align: center;
+		}
+	}
+}

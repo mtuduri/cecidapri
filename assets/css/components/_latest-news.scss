@@ -1,0 +1,127 @@
+/*----------------------------------------*/
+/*  14 - Components - Latest News
+/*----------------------------------------*/
+.latest-news_area {
+	padding: 70px 0 100px;
+	.tab-section_area {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 50px;
+		.latest-news_tab {
+			display: flex;
+			justify-content: center;
+			> ul {
+				&.latest-news_menu {
+					> li {
+						padding-right: 15px;
+						@include breakpoint(max-sm_device){
+							padding-right: 10px;
+						}
+						&:last-child {
+							padding-right: 0;
+						}
+						&:not(:nth-child(n+4)){
+							@include breakpoint(max-xxs_device){
+								padding-bottom: 10px;
+							}
+						}
+						> a {
+							border: 1px solid $white-smoke_color;
+							background-color: $white-smoke_color;
+							@include typography(14px, 30px);
+							color: $nobel-color;
+							border-radius: 3px;
+							padding: 0 20px;
+							display: block;
+							@include breakpoint(max-sm_device){
+								padding: 0 10px;
+							}
+							&.active{
+								border-color: $primary-color;
+								background-color: transparent;
+								color: inherit;
+							}
+							&:hover{
+								border-color: $primary-color;
+								background-color: transparent;
+								color: inherit;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ---Latest News Slider--- */
+.latest-news_slider{
+	.slide-item{
+		.single-item{
+			border: 1px solid $border-color;
+			@extend %basetransition;
+			border-radius: 8px;
+			margin: 5px 5px 45px;
+			.single-img{
+				position: relative;
+				img{
+					border-radius: 8px 8px 0 0;
+				}
+				.inner-btn{
+					@include absCenter;
+					opacity: 0;
+					@extend %basetransition;
+				}
+			}
+			.single-item_content{
+				text-align: center;
+				.inner-content{
+					padding: 15px 15px 0;
+					h4{
+						&.heading{
+							padding-bottom: 10px;
+							> a{
+								@include typography(14px, 24px);
+								text-transform: uppercase;
+								color: $dark-gray_color;
+								&:hover{
+									color: $primary-color;
+								}
+							}
+						}
+					}
+					h3{
+						&.sub-heading{
+							padding-bottom: 10px;
+							> a{
+								@include typography(24px, 36px);
+								@include breakpoint(max-lg_device){
+									font-size: 18px;
+								}
+								&:hover{
+									opacity: 0.85;
+									color: inherit;
+								}
+							}
+						}
+					}
+					p{
+						&.short-desc{
+							@include typography(15px, 26px);
+							padding-bottom: 20px;
+							color: $nobel-color;
+						}
+					}
+				}
+			}
+			&:hover{
+				box-shadow: 0 21px 21px 0 rgba(0, 0, 0, 0.1);
+				.single-img{
+					.inner-btn{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

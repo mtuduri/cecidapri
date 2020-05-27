@@ -1,0 +1,28 @@
+/*----------------------------------------*/
+/*  24 - Components - Ticket
+/*----------------------------------------*/
+.ticket-area{
+    padding: 60px 0;
+    .ticket-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint(max-sm_device){
+            flex-direction: column;
+        }
+        .heading-wrap{
+            display: flex;
+            @include breakpoint(max-sm_device){
+                padding-bottom: 20px;
+            }
+            h2{
+                &.heading{
+                    display: flex;
+                    align-items: flex-end;
+                    color: $white-color;
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}

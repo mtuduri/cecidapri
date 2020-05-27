@@ -1,0 +1,48 @@
+/*----------------------------------------*/
+/*  21 - Components - Counter
+/*----------------------------------------*/
+.counter-area{
+    .counter-item{
+        position: relative;
+        text-align: center;
+        padding: 40px 0 30px;
+        .counter-icon{
+            padding-bottom: 20px;
+            > i{
+                color: rgba(255,255,255,.7);
+                font-size: 40px;
+            }
+        }
+        h2{
+            color: $white-color;
+            padding-bottom: 5px;
+        }
+        span{
+            &.title{
+                color: rgba(255,255,255,.7);
+                @include typography(14px, 24.3px);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    [class*="col-"]{
+        &:not(:last-child){
+            .counter-item{
+                &:before{
+                    background-color: rgba(255,255,255,.3);
+                    content: "";
+                    width: 1px;
+                    height: 80px;
+                    top: 50%;
+                    right: 0;
+                    position: absolute;
+                    transform: translateY(-50%);
+                    @include breakpoint(max-xs_device){
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}

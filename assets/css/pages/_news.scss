@@ -1,0 +1,101 @@
+/*----------------------------------------*/
+/*  36 - Pages - News
+/*----------------------------------------*/
+.news-area{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .news-topic{
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        text-align: center;
+        .inner-topic{
+            padding: 10px 30px 20px;
+            > h2{
+                &.heading{
+                    padding-bottom: 10px;
+                    > a{
+                        @include typography(14px, 24.2px);
+                        text-transform: uppercase;
+                        color: $nobel-color;
+                    }
+                }
+            }
+            > h3{
+                &.headline{
+                    padding-bottom: 15px;
+                    > a{
+                        @include typography(24px, 36px);
+                    }
+                }
+            }
+            > p{
+                &.short-desc{
+                    @include typography(15px, 26px);
+                    color: $nobel-color;
+                }
+            }
+        }
+    }
+    [class*="col-"]{
+        &:not(:nth-child(-n+3)){
+            .news-topic{
+                margin-top: 30px;
+            }
+        }
+        &:not(:first-child){
+            .news-topic{
+                @include breakpoint(max-md_device){
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+/* ---News List Area--- */
+.news-list_area{
+    .news-topic{
+        text-align: left;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        .inner-topic{
+            padding: 0 0 30px;
+            .entry-meta{
+                padding: 0 0 15px;
+                border-top: 0;
+                ul{
+                    justify-content: flex-start;
+                }
+            }
+            .btn-wrap{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+/* ---Single Post Area--- */
+.single-post_item{
+    .entry-meta{
+        ul{
+            @include breakpoint(max-xxs_device){
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    .post-blockquote{
+        @include breakpoint(max-md_device){
+            padding-top: 20px;
+        }
+    }
+    p{
+        &.short-desc{
+            @include typography(15px, 26px);
+            color: $nobel-color;
+        }
+    }
+}

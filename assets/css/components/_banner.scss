@@ -1,0 +1,139 @@
+/*----------------------------------------*/
+/*  13 - Components - Banner
+/*----------------------------------------*/
+.banner-area{
+	&.banner-bg-01{
+		background-image: url('../images/banner/bg/1.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		height: 550px;
+		position: relative;
+		@include breakpoint(max-sm_device){
+			height: 350px;
+		}
+	}
+	.inner-content{
+		@include flexCenter;
+		flex-direction: column;
+		.popup-btn{
+			padding-bottom: 55px;
+		}
+		h1{
+			&.heading{
+				@include typography(48px, 48px);
+				color: $white-color;
+				@include breakpoint(max-md_device){
+					font-size: 30px;
+					line-height: 30px;
+				}
+				@include breakpoint(max-xs_device){
+					font-size: 16px;
+					line-height: 16px;
+				}
+				> span{
+					color: $atlantis-color;
+				}
+			}
+		}
+	}
+}
+
+/* ---Banner Area Two--- */
+.banner-area-2{
+	.banner{
+		&-content{
+			@include breakpoint(max-md_device){
+				padding-top: 25px;
+				padding-bottom: 20px;
+			}
+			> i{
+				color: $primary-color;
+				padding-bottom: 10px;
+				font-size: 32px;
+				display: block;
+			}
+			> p{
+				&.short-desc{
+					@include typography(34px, 56px);
+					padding-bottom: 45px;
+					color: $nobel-color;
+					@include breakpoint(max-lg_device){
+						font-size: 25px;
+						line-height: 47px;
+					}
+				}
+			}
+			> h5{
+				&.author-name{
+					padding-top: 20px;
+					@include typography(18px, 31.2px, 500);
+				}
+			}
+			> span{
+				&.occupation{
+					@include typography(14px, 24.3px);
+					color: $nobel-color;
+					padding-top: 10px;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+/* ---Banner With Countdown--- */
+.banner-with_coundown{
+	@include breakpoint(max-sm_device){
+		padding-top: 20px;
+	}
+	.banner-nav{
+		.inner-nav{
+			background-color: $white-color;
+			margin-top: -100px;
+			.banner-content{
+				background-color: $white-color;
+				padding: 30px;
+				@include breakpoint(max-xxs_device){
+					padding: 30px 15px;
+				}
+				ul{
+					&.list-item{
+						li{
+							display: flex;
+							width: 100%;
+							&:not(:last-child){
+								border-bottom: 1px solid $border-color;
+								padding-bottom: 15px;
+								margin-bottom: 15px;
+							}
+							h5{
+								&.title{
+									@include typography(15px, 26px, 500);
+									text-transform: uppercase;
+									letter-spacing: 0.1px;
+									width: 50%;
+								}
+							}
+							span{
+								color: $nobel-color;
+								&.atlantis-color{
+									color: $atlantis-color;
+								}
+							}
+						}
+					}
+				}
+				.btn-wrap{
+					padding-top: 20px;
+				}
+			}
+		}
+		.countdown-wrap{
+			display: flex;
+			justify-content: center;
+			padding-top: 55px;
+			padding-bottom: 55px;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+/*----------------------------------------*/
+/*  38 - Pages - Coming Soon
+/*----------------------------------------*/
+.coming-soon_item{
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 155px;
+    h1{
+        &.heading{
+            padding-bottom: 65px;
+            @include breakpoint(max-md_device){
+                font-size: 30px;
+                line-height: 1.4;
+            }
+            @include breakpoint(max-sm_device){
+                font-size: 20px;
+            }
+        }
+    }
+    .countdown-wrap{
+        padding-top: 60px;
+        &.denim-text_color{
+            .countdown{
+                .countdown__item{
+                    margin-left: 80px;
+                    @include breakpoint(max-md_device){
+                        margin-left: 25px;
+                    }
+                    span{
+                        &.countdown__time{
+                            color: $primary-color;
+                            font-size: 100px;
+                            @include breakpoint(max-md_device){
+                                font-size: 50px;
+                            }
+                            @include breakpoint(max-xs_device){
+                                font-size: 30px;
+                            }
+                        }
+                        &.countdown__text{
+                            color: $nobel-color;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

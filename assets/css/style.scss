@@ -1,0 +1,106 @@
+/******************************
+
+INDEX:
+
+    00 - Base - Typography
+    01 - Base - Variables
+    02 - Base - Mixins
+
+    03 - Utilities - Helper
+    04 - Utilities - Color
+
+    10 - Components - Navigation
+    11 - Components - Slider
+    12 - Components - Button
+    13 - Components - Banner
+    14 - Components - Latest News
+    15 - Components - Brand
+    16 - Components - Form
+    17 - Components - Social Link
+    18 - Components - Animation
+    19 - Components - Breadcrumb
+    20 - Components - Newsletter
+    21 - Components - Counter
+    22 - Components - Introduction
+    23 - Components - Event
+    24 - Components - Ticket
+    25 - Components - Testimonial
+    26 - Components - Instagram
+    27 - Components - Services
+    28 - Components - Sidebar
+
+    30 - Section - Header
+    31 - Section - Footer
+
+    32 - Pages - About Us
+    33 - Pages - Academics
+    34 - Pages - Pricing Plans
+    35 - Pages - Our Classes
+    36 - Pages - News
+    37 - Pages - Faculty and Staff
+    38 - Pages - Coming Soon
+    39 - Pages - Error 404
+    40 - Pages - Contact
+
+******************************/
+
+/*
+
+    Primary Color:     #1054c8;
+    Text Color:        #333333;
+    Border Color:      #e5e5e5;
+
+
+    Font Family List:-
+
+    font-family: 'Roboto', sans-serif;
+
+*/
+
+// Google Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//Base
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/typography';
+
+// Utilities
+@import 'utilities/helper';
+@import 'utilities/color';
+
+// Components
+@import 'components/navigation';
+@import 'components/slider';
+@import 'components/button';
+@import 'components/banner';
+@import 'components/latest-news';
+@import 'components/brand';
+@import 'components/form';
+@import 'components/social-link';
+@import 'components/animation';
+@import 'components/breadcrumb';
+@import 'components/newsletter';
+@import 'components/counter';
+@import 'components/introduction';
+@import 'components/event';
+@import 'components/ticket';
+@import 'components/testimonial';
+@import 'components/instagram';
+@import 'components/services';
+@import 'components/sidebar';
+
+// Section
+@import 'section/header';
+@import 'section/footer';
+
+// Pages
+@import 'pages/about-us';
+@import 'pages/academics';
+@import 'pages/pricing-plans';
+@import 'pages/our-classes';
+@import 'pages/news';
+@import 'pages/faculty-and-staff';
+@import 'pages/coming-soon';
+@import 'pages/error-404';
+@import 'pages/contact';

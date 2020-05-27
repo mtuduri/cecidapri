@@ -1,0 +1,177 @@
+/*----------------------------------------*/
+/*  11 - Components - Slider
+/*----------------------------------------*/
+/* ---Home Slider--- */
+
+.home-slider{
+	.slide{
+		&-item{
+			@include flexCenter;
+			&.bg-1,
+			&.bg-2{
+				background-image: url('../images/slider/bg/1-1.jpg');
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				height: 600px;
+				position: relative;
+				@include breakpoint(max-sm_device){
+					height: 410px;
+				}
+				&:before{
+					background-color: rgba(0,0,0,0.3);
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					content: "";
+					position: absolute;
+					z-index: -1;
+				}
+				&.bg-2{
+					background-image: url('../images/slider/bg/1-2.jpg');
+				}
+			}
+		}
+		&-content{
+			text-align: center;
+			span, h1{
+				color: $white-color;
+			}
+			> span{
+				&.intro{
+					text-transform: uppercase;
+					@include typography(13px, 15px, 700);
+					letter-spacing: 3px;
+					display: block;
+					padding-bottom: 35px;
+				}
+			}
+			> h1{
+				&.heading{
+					@include typography(56px, 63px, 300);
+					text-transform: capitalize;
+					padding-bottom: 20px;
+					@include breakpoint(max-sm_device){
+						font-size: 30px;
+						line-height: 37px;
+					}
+					> span{
+						color: $atlantis-color;
+					}	
+				}
+			}
+		}
+	}
+}
+
+/* ---Home Slider Two--- */
+.home-slider-2{
+	.slide{
+		&-item{
+			display: flex;
+			align-items: center;
+			height: 100%;
+			&.bg-3{
+				background-image: url('../images/slider/bg/2-1.jpg');
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				height: 600px;
+				position: relative;
+				@include breakpoint(max-sm_device){
+					height: 410px;
+				}
+			}
+		}
+		&-content{
+			position: relative;
+			text-align: center;
+			left: 10%;
+			span, h1{
+				color: $white-color;
+			}
+			> span{
+				&.intro{
+					text-transform: uppercase;
+					@include typography(13px, 15px, 700);
+					letter-spacing: 3px;
+					display: block;
+					padding-bottom: 35px;
+				}
+			}
+			> h1{
+				&.heading{
+					@include typography(56px, 63px, 300);
+					text-transform: capitalize;
+					padding-bottom: 20px;
+					@include breakpoint(max-sm_device){
+						font-size: 30px;
+						line-height: 37px;
+					}
+					> span{
+						color: $atlantis-color;
+					}	
+				}
+			}
+		}
+	}
+}
+
+/* ---Home Slider Three--- */
+.home-slider-3{
+	.slide{
+		&-item{
+			display: flex;
+			align-items: center;
+			&.bg-4,
+			&.bg-5{
+				background-image: url('../images/slider/bg/3-1.jpg');
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				height: 585px;
+				position: relative;
+				@include breakpoint(max-sm_device){
+					height: 410px;
+				}
+				&.bg-5{
+					background-image: url('../images/slider/bg/3-2.jpg');
+				}
+			}
+		}
+		&-content{
+			background-color: $white-color;
+			position: relative;
+			max-width: 400px;
+			padding: 25px 30px 30px;
+			left: 10%;
+			@include breakpoint(max-xxs_device){
+				left: 15px;
+				width: calc(100% - 30px);
+				max-width: 100%;
+			}
+			> h1{
+				&.heading{
+					@include typography(34px, 35px);
+					color: $primary-color;
+					padding-bottom: 15px;
+				}
+			}
+			> h3{
+				&.sub-heading{
+					@include typography(17px, 17px);
+					color: $gray-color;
+					padding-bottom: 20px;
+				}
+			}
+			> p{
+				&.short-desc{
+					@include typography(12px, 18px);
+					padding-bottom: 25px;
+					color: $nobel-color;
+				}
+			}
+		}
+	}
+}

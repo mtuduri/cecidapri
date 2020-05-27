@@ -1,0 +1,61 @@
+/*----------------------------------------*/
+/*  33 - Pages - Academics
+/*----------------------------------------*/
+.academics-area{
+    padding-top: 95px;
+    padding-bottom: 100px;
+    .academics{
+        &-item{
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+        &-inner_item{
+            box-shadow: 0 0 57px 0 rgba(0,0,0,.08);
+            border-radius: 8px;
+        }
+        &-content{
+            padding-left: 60px;
+            position: relative;
+            @include breakpoint(max-sm_device){
+                padding: 30px;
+            }
+            &:before{
+                color: $white-smoke_color;
+                content: attr(data-count);
+                display: block;
+                position: absolute;
+                bottom: -120px;
+                right: 15px;
+                font-size: 80px;
+                font-weight: 900;
+                @include breakpoint(max-lg_device){
+                    bottom: -60px;
+                }
+                @include breakpoint(max-md_device){
+                    bottom: -40px;
+                    font-size: 50px;
+                }
+                @include breakpoint(max-sm_device){
+                    bottom: 40px;
+                }
+            }
+            > h2{
+                &.heading{
+                    padding-bottom: 15px;
+                    > span{
+                        color: $primary-color;
+                    }
+                }
+            }
+            > p{
+                &.short-desc{
+                    @include typography(15px, 26px);
+                    color: $nobel-color;
+                    max-width: 85%;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

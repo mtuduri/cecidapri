@@ -1,0 +1,59 @@
+/*----------------------------------------*/
+/*  25 - Components - Testimonial
+/*----------------------------------------*/
+.testimonials-area{
+    padding-top: 95px;
+}
+
+/* ---Testimonial Slider--- */
+.testimonial-slider{
+    .slide-item{
+        .single-item{
+            text-align: center;
+            border: 1px solid $border-color;
+            @extend %basetransition;
+            margin: 5px 5px 45px;
+            padding: 30px;
+            .single-img{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 25px;
+                img{
+                    border-radius: 100%;
+                }
+            }
+            .single-item_content{
+                p{
+                    &.short-desc{
+                        @include typography(18px, 31.2px);
+                        color: $nobel-color;
+                        padding-bottom: 15px;
+                    }
+                }
+                .client-info{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h6{
+                        &.client-name{
+                            a{
+                                @include typography(18px, 31.2px)
+                            }
+                        }
+                    }
+                    span{
+                        &.occupation{
+                            @include typography(14px, 24.3px);
+                            color: $nobel-color;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                box-shadow: 0 21px 21px 0 rgba(0, 0, 0, 0.1);
+                border-color: transparent;
+            }
+        }
+    }
+}
